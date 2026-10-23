@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#123b2b">
+<meta name="description" content="LANGLOIS COUVERTURE : couverture, zinguerie, charpente, étanchéité et rénovation de toiture à Lille et ses alentours.">
+<title>LANGLOIS COUVERTURE | Toiture & Rénovation</title>
+
+<style>
+:root {
+  --green: #123b2b;
+  --green2: #205640;
+  --copper: #c48652;
+  --cream: #f7f5ef;
+  --white: #ffffff;
+  --text: #26342d;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+a { color: inherit; }
+header {
+  background: var(--green);
+  color: white;
+  padding: 17px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.logo { font-size: 22px; font-weight: 900; letter-spacing: 1px; }
+.logo span { color: var(--copper); }
+nav { display: flex; flex-wrap: wrap; gap: 17px; }
+nav a { text-decoration: none; font-size: 14px; }
+nav a:hover { color: #e7b98f; }
+.hero {
+  min-height: 570px;
+  display: flex;
+  align-items: center;
+  padding: 75px 7%;
+  color: white;
+  background:
+    linear-gradient(90deg, rgba(9,31,22,.91), rgba(9,31,22,.45)),
+    url("https://images.unsplash.com/photo-1635424710928-1d1e9d4b5c62?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+.hero-content { max-width: 720px; }
+.tag {
+  color: #f0c69e;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+h1 { font-size: clamp(38px, 6vw, 68px); line-height: 1.08; margin: 15px 0; }
+.hero p { font-size: 18px; max-width: 570px; }
+.btn {
+  display: inline-block;
+  background: var(--copper);
+  color: #17291f;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 14px 22px;
+  border-radius: 5px;
+  margin: 12px 8px 0 0;
+  transition: transform .25s, background .25s;
+}
+.btn:hover { transform: translateY(-3px); background: #e2aa78; }
+.btn-outline { background: transparent; color: white; border: 1px solid white; }
+section { padding: 75px 7%; }
+.section-heading { text-align: center; max-width: 750px; margin: 0 auto 38px; }
+.section-heading h2 { font-size: clamp(28px, 4vw, 42px); color: var(--green); margin: 5px 0 12px; }
+.eyebrow { color: #a76d3c; font-weight: bold; letter-spacing: 2px; font-size: 12px; text-transform: uppercase; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px #102c1c0d;
+  transition: transform .25s, box-shadow .25s;
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px #102c1c18; }
+.card img { width: 100%; height: 175px; object-fit: cover; display: block; }
+.card-content { padding: 20px; }
+.card h3 { color: var(--green); margin: 0 0 8px; }
+.card p { margin: 0; font-size: 14px; }
+.services { background: white; }
+.service-list {
+  columns: 2;
+  column-gap: 45px;
+  padding-left: 22px;
+}
+.service-list li { padding: 5px 0; break-inside: avoid; }
+.materials { background: var(--cream); }
+.feature {
+  background: var(--green);
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: center;
+}
+.feature h2 { font-size: clamp(28px, 4vw, 40px); line-height: 1.2; }
+.feature img { width: 100%; height: 330px; object-fit: cover; border-radius: 8px; }
+.feature p { color: #e3e9e4; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
+.step { background: white; padding: 23px; border-radius: 8px; border-top: 4px solid var(--copper); }
+.step strong { color: var(--green); font-size: 19px; }
+.area { background: #e9eee8; text-align: center; }
+.area h2 { color: var(--green); font-size: 34px; }
+.contact { background: var(--green); color: white; text-align: center; }
+.contact h2 { font-size: clamp(30px, 4vw, 44px); margin-bottom: 10px; }
+.contact p { max-width: 650px; margin: 0 auto 20px; color: #e3e9e4; }
+.contact .btn { margin-top: 10px; }
+footer {
+  background: #0b281d;
+  color: #d9e2dc;
+  padding: 25px 7%;
+  text-align: center;
+  font-size: 13px;
+}
+footer a { color: #f0c69e; }
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s, transform .7s; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.roof-animation {
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  max-width: 850px;
+  margin: auto;
+  box-shadow: 0 8px 30px #0000000b;
+}
+.roof-animation svg { width: 100%; height: auto; display: block; }
+.tile { animation: tileOn .8s both; transform-origin: center; }
+.tile:nth-of-type(2) { animation-delay: .15s; }
+.tile:nth-of-type(3) { animation-delay: .3s; }
+.tile:nth-of-type(4) { animation-delay: .45s; }
+@keyframes tileOn {
+  from { opacity: 0; transform: translateY(-20px) rotate(-3deg); }
+  to { opacity: 1; transform: translateY(0) rotate(0); }
+}
+@media(max-width:700px) {
+  header { align-items: flex-start; }
+  nav { gap: 12px; }
+  .hero { min-height: 520px; padding: 55px 6%; }
+  section { padding: 55px 6%; }
+  .service-list { columns: 1; }
+  .feature { grid-template-columns: 1fr; }
+  .feature img { height: 240px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="logo">LANGLOIS <span>COUVERTURE</span></div>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#materiaux">Matériaux</a>
+    <a href="#realisations">Rénovation</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+  <div class="hero-content">
+    <div class="tag">Lille et ses alentours · Nord (59)</div>
+    <h1>Votre toiture entre de bonnes mains.</h1>
+    <p>Couverture, zinguerie, charpente, étanchéité et rénovation : des solutions pour protéger et valoriser votre habitation.</p>
+    <a class="btn" href="#contact">Demander un devis</a>
+    <a class="btn btn-outline" href="#services">Découvrir nos services</a>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-heading">
+    <div class="eyebrow">Notre savoir-faire</div>
+    <h2>Nos services de toiture</h2>
+    <p>Des travaux ponctuels à la rénovation complète, découvrez les prestations proposées par LANGLOIS COUVERTURE.</p>
+  </div>
+  <div class="grid">
+    <article class="card reveal">
+      <img src="https://images.unsplash.com/photo-1635424710928-1d1e9d4b5c62?auto=format&fit=crop&w=800&q=80" alt="Toiture d'une maison">
+      <div class="card-content"><h3>Couverture</h3><p>Pose et rénovation de tuiles, ardoises, shingle, bac acier et autres couvertures adaptées au bâtiment.</p></div>
+    </article>
+    <article class="card reveal">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Maison et toiture">
+      <div class="card-content"><h3>Rénovation</h3><p>Dépose de l'ancienne couverture, remplacement des éléments usés et réfection de toiture.</p></div>
+    </article>
+    <article class="card reveal">
+      <img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=800&q=80" alt="Travaux de bâtiment">
+      <div class="card-content"><h3>Zinguerie</h3><p>Solins, noues, chéneaux, abergements de cheminée, raccords et finitions métalliques.</p></div>
+    </article>
+    <article class="card reveal">
+      <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" alt="Travaux et rénovation">
+      <div class="card-content"><h3>Gouttières</h3><p>Pose, remplacement, réparation et entretien de gouttières et de descentes d'eaux pluviales.</p></div>
+    </article>
+    <article class="card reveal">
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Structure de bâtiment">
+      <div class="card-content"><h3>Charpente</h3><p>Réparation, rénovation, renforcement et remplacement des pièces de charpente.</p></div>
+    </article>
+    <article class="card reveal">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Maison rénovée">
+      <div class="card-content"><h3>Étanchéité</h3><p>Recherche d'infiltrations et travaux d'étanchéité pour les raccords, toitures plates et toits-terrasses.</p></div>
+    </article>
+    <article class="card reveal">
+      <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80" alt="Maison contemporaine">
+      <div class="card-content"><h3>Isolation</h3><p>Isolation de toiture et de combles, écran sous-toiture et amélioration de la ventilation.</p></div>
+    </article>
+    <article class="card reveal">
+      <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=800&q=80" alt="Habitation avec toiture">
+      <div class="card-content"><h3>Entretien</h3><p>Nettoyage, démoussage adapté, contrôle visuel et entretien préventif de la toiture.</p></div>
+    </article>
+    <article class="card reveal">
+      <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Maison et travaux">
+      <div class="card-content"><h3>Fenêtres de toit</h3><p>Pose, remplacement et réparation de fenêtres de toit et de leurs raccords d'étanchéité.</p></div>
+    </article>
+    <article class="card reveal">
+      <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="Façade et finitions">
+      <div class="card-content"><h3>Bardage et habillage</h3><p>Habillage de rives, bandeaux, débords de toit, sous-faces et bardages adaptés.</p></div>
+    </article>
+    <article class="card reveal">
+      <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="Maison avec toiture">
+      <div class="card-content"><h3>Dépannage toiture</h3><p>Recherche de fuite, réparation des éléments déplacés et mise hors d'eau provisoire si possible.</p></div>
+    </article>
+    <article class="card reveal">
+      <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80" alt="Maison et aménagement">
+      <div class="card-content"><h3>Extensions et annexes</h3><p>Couverture de garages, extensions, dépendances, abris et petits bâtiments.</p></div>
+    </article>
+  </div>
+</section>
+
+<section class="services">
+  <div class="section-heading">
+    <div class="eyebrow">Une gamme complète</div>
+    <h2>Autres prestations</h2>
+    <p>Les détails qui contribuent à une toiture durable, bien finie et adaptée à votre bâtiment.</p>
+  </div>
+  <ul class="service-list">
+    <li>Pose et réparation de faîtage</li>
+    <li>Remplacement de faîtières</li>
+    <li>Réfection des arêtiers</li>
+    <li>Réparation des rives</li>
+    <li>Pose de closoirs ventilés</li>
+    <li>Pose de liteaux et contre-liteaux</li>
+    <li>Remplacement de chevrons</li>
+    <li>Réparation de pannes et voliges</li>
+    <li>Pose d'écran sous-toiture</li>
+    <li>Habillage de cheminée</li>
+    <li>Étanchéité des solins</li>
+    <li>Pose de noues et chéneaux</li>
+    <li>Remplacement de crochets de gouttières</li>
+    <li>Pose de protège-gouttières</li>
+    <li>Débouchage de descentes pluviales</li>
+    <li>Pose de sorties de ventilation</li>
+    <li>Installation de chapeaux de cheminée</li>
+    <li>Réparation de toiture après intempéries</li>
+    <li>Pose de bâche de protection provisoire</li>
+    <li>Inspection visuelle de toiture</li>
+    <li>Conseils sur les matériaux</li>
+    <li>Dépose de l'ancienne couverture</li>
+    <li>Évacuation des déchets de chantier</li>
+    <li>Nettoyage en fin de chantier</li>
+    <li>Habillage de lucarnes</li>
+    <li>Réfection de toiture de garage</li>
+    <li>Raccordement entre deux toitures</li>
+    <li>Réparation de raccords défectueux</li>
+    <li>Entretien des évacuations d'eau</li>
+    <li>Préparation de toiture avant rénovation</li>
+  </ul>
+</section>
+
+<section class="materials" id="materiaux">
+  <div class="section-heading">
+    <div class="eyebrow">Des solutions adaptées</div>
+    <h2>Les matériaux de couverture</h2>
+    <p>Le choix dépend de la pente, du bâtiment, des règles locales d'urbanisme et des caractéristiques du projet.</p>
+  </div>
+  <div class="grid">
+    <article class="card"><div class="card-content"><h3>Tuile</h3><p>Une solution classique, disponible dans différents formats et coloris.</p></div></article>
+    <article class="card"><div class="card-content"><h3>Ardoise</h3><p>Une finition élégante, naturelle ou synthétique selon le projet.</p></div></article>
+    <article class="card"><div class="card-content"><h3>Zinc</h3><p>Un matériau métallique utilisé pour certaines couvertures et finitions.</p></div></article>
+    <article class="card"><div class="card-content"><h3>Bac acier</h3><p>Une couverture métallique adaptée à certains bâtiments et dépendances.</p></div></article>
+    <article class="card"><div class="card-content"><h3>Shingle</h3><p>Des bardeaux bitumés adaptés à certaines toitures selon leur configuration.</p></div></article>
+    <article class="card"><div class="card-content"><h3>Cuivre et aluminium</h3><p>Des matériaux métalliques pour des réalisations et finitions spécifiques.</p></div></article>
+  </div>
+</section>
+
+<section class="feature" id="realisations">
+  <div>
+    <div class="eyebrow">Un toit remis à neuf</div>
+    <h2>De l'ancienne couverture à une toiture rénovée.</h2>
+    <p>Une rénovation réussie commence par l'inspection du support, la préparation du chantier et le choix des matériaux adaptés.</p>
+    <a class="btn" href="#contact">Parler de votre projet</a>
+  </div>
+  <div class="roof-animation">
+    <svg viewBox="0 0 500 300" role="img" aria-label="Illustration animée de pose de tuiles sur un toit">
+      <rect width="500" height="300" rx="8" fill="#edf0e9"/>
+      <path d="M55 145 L250 35 L445 145 L420 160 L250 67 L80 160 Z" fill="#7b817b"/>
+      <path d="M80 158 L250 67 L420 158 L420 245 L80 245 Z" fill="#b9bcb6"/>
+      <g fill="#9b4f37" stroke="#f0b49a" stroke-width="2">
+        <path class="tile" d="M105 151 L145 130 L170 143 L130 165 Z"/>
+        <path class="tile" d="M150 127 L190 105 L215 119 L175 141 Z"/>
+        <path class="tile" d="M195 102 L235 80 L260 94 L220 116 Z"/>
+        <path class="tile" d="M240 77 L280 99 L305 85 L265 63 Z"/>
+        <path class="tile" d="M285 102 L325 124 L350 110 L310 88 Z"/>
+        <path class="tile" d="M330 127 L370 149 L395 135 L355 113 Z"/>
+        <path class="tile" d="M132 169 L172 147 L197 161 L157 183 Z"/>
+        <path class="tile" d="M177 145 L217 123 L242 137 L202 159 Z"/>
+        <path class="tile" d="M222 120 L262 98 L287 112 L247 134 Z"/>
+        <path class="tile" d="M267 145 L307 123 L332 137 L292 159 Z"/>
+        <path class="tile" d="M312 170 L352 148 L377 162 L337 184 Z"/>
+      </g>
+      <path d="M80 245 L420 245 L420 260 L80 260 Z" fill="#123b2b"/>
+      <text x="250" y="285" font-size="12" text-anchor="middle" fill="#123b2b">Illustration de pose de tuiles</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <div class="section-heading">
+    <div class="eyebrow">Votre projet en quelques étapes</div>
+    <h2>Comment ça se passe ?</h2>
+  </div>
+  <div class="steps">
+    <div class="step"><strong>01. Contact</strong><p>Présentez votre toiture et les travaux souhaités par e-mail.</p></div>
+    <div class="step"><strong>02. Évaluation</strong><p>Les besoins et les solutions possibles sont étudiés selon le chantier.</p></div>
+    <div class="step"><strong>03. Devis</strong><p>Les travaux envisagés et leur coût sont détaillés dans le devis.</p></div>
+    <div class="step"><strong>04. Travaux</strong><p>Le chantier est organisé selon les conditions convenues.</p></div>
+  </div>
+</section>
+
+<section class="area">
+  <div class="eyebrow">Notre secteur</div>
+  <h2>Lille et ses alentours</h2>
+  <p>Pour vos projets de couverture et de rénovation dans la métropole lilloise et les communes voisines, contactez-nous pour vérifier la zone d'intervention.</p>
+</section>
+
+<section class="contact" id="contact">
+  <div class="eyebrow">Parlons de votre toiture</div>
+  <h2>Vous avez un projet ?</h2>
+  <p>Fuite, rénovation, gouttières, zinguerie ou couverture neuve : décrivez-nous votre besoin pour demander un devis.</p>
+  <a class="btn" href="mailto:GL.couverture.lille@gmail.com?subject=Demande%20de%20devis%20-%20Langlois%20Couverture">Demander un devis par e-mail</a>
+  <p style="margin-top:24px">GL.couverture.lille@gmail.com</p>
+</section>
+</main>
+
+<footer>
+  <div><strong>LANGLOIS COUVERTURE</strong> · Lille et ses alentours</div>
+  <div>Contact : <a href="mailto:GL.couverture.lille@gmail.com">GL.couverture.lille@gmail.com</a></div>
+  <div style="margin-top:10px">© <span id="year"></span> LANGLOIS COUVERTURE — Tous droits réservés.</div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".reveal").forEach(element => observer.observe(element));
+</script>
+</body>
+</html>
